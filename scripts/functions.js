@@ -31,5 +31,6 @@ function equalOp(){
 function decimal(){
     if(!display.textContent.includes(".")){
         display.textContent+="."
+        equalDone=false
     }
 }
