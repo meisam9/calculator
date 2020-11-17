@@ -77,14 +77,18 @@ function keyHandle(e){
     
     operators.forEach(operator=>{
         if(e.key===operator && e.key==="+"){
-            
+            if(display.textContent !=="0"){
+                equalOp()
+            }
             calculator.dataset.firstNumber=display.textContent
             display.textContent="0"
             calculator.dataset.operator=operator
         }
         
         if(e.key===operator && e.key==="-"){
-        
+            if(display.textContent !=="0"){
+                equalOp()
+            }
             calculator.dataset.firstNumber=display.textContent
             display.textContent="0"
             calculator.dataset.operator=operator
@@ -92,13 +96,18 @@ function keyHandle(e){
         }
         
         if(e.key===operator && e.key==="*"){
-            
+            if(display.textContent !=="0"){
+                equalOp()
+            }
             calculator.dataset.firstNumber=display.textContent
             display.textContent="0"
             calculator.dataset.operator=operator
         }
         
         if(e.key===operator && e.key==="/"){
+            if(display.textContent !=="0"){
+                equalOp()
+            }
             calculator.dataset.firstNumber=display.textContent
             display.textContent="0"
             calculator.dataset.operator=operator
